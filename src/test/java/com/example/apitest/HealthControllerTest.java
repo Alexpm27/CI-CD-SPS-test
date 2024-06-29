@@ -28,4 +28,13 @@ public class HealthControllerTest {
         assertEquals("HI, API AVAILABLE!", content);
     }
 
+    @Test
+    void status() throws Exception {
+        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/health/status"))
+                .andReturn();
+
+        String content = result.getResponse().getContentAsString();
+        assertEquals("OK", content);
+    }
+
 }
