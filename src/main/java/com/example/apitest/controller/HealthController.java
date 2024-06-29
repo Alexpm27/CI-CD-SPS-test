@@ -13,4 +13,9 @@ public class HealthController {
         return "HI, API AVAILABLE!";
     }
 
+    @GetMapping("/status")
+    public String status(){
+        return "OK";
+    }
+
 }
