@@ -34,7 +34,7 @@ public class HealthControllerTest {
                 .andReturn();
 
         String content = result.getResponse().getContentAsString();
-        assertEquals("OK", content);
+        assertEquals("NO OK", content);
     }
 
 }
