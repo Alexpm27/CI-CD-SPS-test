@@ -127,10 +127,13 @@ Herramienta gráfica intuitiva, para visualizar y editar las plantillas de Cloud
 ###### AWS CLI y AWS SDKs:
 Estas herramientas permiten interactuar con las plantillas de CloudFormation a través de comandos y scripts, facilitando la implementación, actualización y validación de stacks de forma repetible y controlada.
 
+###### AWS CloudFormation Template Validation:
+Antes de realizar cualquier cambio o despliegue, se valida las plantillas de CloudFormation con la herramienta de validación de AWS.
+
 ###### Pruebas en Entornos de Desarrollo:
 Se implementan las plantillas de CloudFormation en entornos de desarrollo. Observar cómo se comportan los despliegues en un entorno controlado permite realizar ajustes según sea necesario.
 
-### Consideraciones adicionales:
+### Adicional:
 ###### Seguridad y Accesos IAM:
 Es fundamental asegurarse de que los roles IAM utilizados en las plantillas de CloudFormation tengan los permisos adecuados para interactuar con los servicios de AWS utilizados en el entorno ECS con Fargate.
 
