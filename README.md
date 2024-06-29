@@ -118,14 +118,14 @@ Posteriormente, se procede a descargar las plantillas de CloudFormation proporci
 ###### Identificación de Parámetros y Variables:
 Dentro de las plantillas de CloudFormation, se identifican los parámetros y variables utilizados, que pueden incluir configuraciones específicas del entorno como nombres de clústeres, configuraciones de red y políticas de IAM.
 
-#### Herramientas para evaluar y ajustar las plantillas de CloudFormation:
+### Herramientas para evaluar y ajustar las plantillas de CloudFormation:
 ###### AWS CloudFormation Designer:
 Herramienta gráfica intuitiva, para visualizar y editar las plantillas de CloudFormation de manera eficiente. Con esta herramienta, se pueden arrastrar y soltar componentes, ver relaciones entre recursos y validar la estructura general de las plantillas antes de la implementación.
 
 ###### AWS CLI y AWS SDKs:
 Estas herramientas permiten interactuar con las plantillas de CloudFormation a través de comandos y scripts, facilitando la implementación, actualización y validación de stacks de forma repetible y controlada.
-######
-##### Pruebas en Entornos de Desarrollo:
+
+###### Pruebas en Entornos de Desarrollo:
 Se implementan las plantillas de CloudFormation en entornos de desarrollo. Observar cómo se comportan los despliegues en un entorno controlado permite realizar ajustes según sea necesario.
 
 ### Consideraciones adicionales:
