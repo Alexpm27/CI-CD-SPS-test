@@ -111,31 +111,21 @@ o de lo contrario no debería permitirlo.
 
 ## Pasos y/o herramientas para entender las plantillas de Cloudformation y evaluar que ajustes se tendrían que realizar a la etapa de despliegue
 
-###### Revisión de la Documentación de AWS:
-Se inicia consultando la documentación oficial de AWS sobre ECS y Fargate para comprender los requisitos y las mejores prácticas para el despliegue de contenedores en estas plataformas.
+### 
+### Revisar el repositorio:
 
-###### Análisis de las Plantillas de CloudFormation:
-Posteriormente, se procede a descargar las plantillas de CloudFormation proporcionadas por AWS desde el repositorio. Luego, se examinan los recursos definidos en estas plantillas, como clústeres ECS, definiciones de tarea, servicios y roles IAM.
+- Explorar la estructura del repositorio y revisar los archivos README.md para obtener una visión general de las plantillas disponibles y su propósito.
+- Identificar las plantillas específicas para ECS con Fargate, enfocándose en las que son relevantes para el proyecto.
+### Comprender las plantillas:
 
-###### Identificación de Parámetros y Variables:
-Dentro de las plantillas de CloudFormation, se identifican los parámetros y variables utilizados, que pueden incluir configuraciones específicas del entorno como nombres de clústeres, configuraciones de red y políticas de IAM.
+- Leer la documentación adjunta a cada plantilla para entender los recursos que crea y cómo configurarlos.
+- Analizar el código YAML o JSON de las plantillas para comprender los detalles de los recursos y sus configuraciones.
+### Utilizar herramientas de AWS:
 
-### Herramientas para evaluar y ajustar las plantillas de CloudFormation:
-###### AWS CloudFormation Designer:
-Herramienta gráfica intuitiva, para visualizar y editar las plantillas de CloudFormation de manera eficiente. Con esta herramienta, se pueden arrastrar y soltar componentes, ver relaciones entre recursos y validar la estructura general de las plantillas antes de la implementación.
+- Utilizar AWS CloudFormation Designer para visualizar y editar las plantillas de manera gráfica.
+- Emplear la AWS CLI para desplegar las plantillas en un entorno de prueba, permitiendo observar su comportamiento en un entorno real.
+### Evaluar y ajustar:
 
-###### AWS CLI y AWS SDKs:
-Estas herramientas permiten interactuar con las plantillas de CloudFormation a través de comandos y scripts, facilitando la implementación, actualización y validación de stacks de forma repetible y controlada.
-
-###### AWS CloudFormation Template Validation:
-Antes de realizar cualquier cambio o despliegue, se valida las plantillas de CloudFormation con la herramienta de validación de AWS.
-
-###### Pruebas en Entornos de Desarrollo:
-Se implementan las plantillas de CloudFormation en entornos de desarrollo. Observar cómo se comportan los despliegues en un entorno controlado permite realizar ajustes según sea necesario.
-
-### Adicional:
-###### Seguridad y Accesos IAM:
-Es fundamental asegurarse de que los roles IAM utilizados en las plantillas de CloudFormation tengan los permisos adecuados para interactuar con los servicios de AWS utilizados en el entorno ECS con Fargate.
-
-###### Monitoreo y Logging:
-Se integran herramientas de monitoreo y registro, como Amazon CloudWatch, para supervisar el rendimiento y el comportamiento de los contenedores desplegados en ECS con Fargate. Configurar alertas y métricas relevantes proporciona visibilidad continua del entorno y permite una respuesta rápida a posibles problemas operativos.
+- Desplegar las plantillas en un entorno de desarrollo para evaluar su funcionamiento y detectar posibles errores o advertencias.
+- Monitorear los logs y métricas de los recursos desplegados utilizando CloudWatch, identificando problemas de rendimiento o configuración.
+- Realizar los ajustes necesarios en las plantillas basándose en las pruebas y la revisión de logs.
