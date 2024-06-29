@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+    pull_request:
+      branches:
+        - main
 
 jobs:
   build:
@@ -31,28 +34,32 @@ jobs:
       - name: Build and Verify with Maven
         run: mvn verify
 
+      - name: Merge PR if successful
+        if: success() && github.event_name == 'pull_request'
+        run: echo "Successful PR build, ready to merge..."
+
       - name: Upload Artifact
-        if: success()
+        if: success() && github.event_name == 'push'
         uses: actions/upload-artifact@v3
         with:
           name: api-artifact
           path: target/*.jar
 
       - name: Publish to GitHub Packages
-        if: success()
+        if: success() && github.event_name == 'push'
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: mvn deploy -Dregistry=https://maven.pkg.github.com/Alexpm27 -Dtoken=$GITHUB_TOKEN
 
       - name: Download Artifact
-        if: success()
+        if: success() && github.event_name == 'push'
         uses: actions/download-artifact@v2
         with:
           name: api-artifact
           path: deploy
 
       - name: Deployment Artifact
-        if: success()
+        if: success() && github.event_name == 'push'
         run: |
           echo "Despliegue en curso..."
           # Comandos para desplegar en el entorno deseado (ejemplo: Kubernetes, ECS, etc.)
