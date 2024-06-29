@@ -101,11 +101,13 @@ o de lo contrario no debería permitirlo.
 - GitHub Actions Workflow:
     - Build and Push Docker Image: Añadir pasos al workflow para construir la imagen Docker y publicarla en un registro de contenedores como GitHub Container Registry o Amazon ECR.
     - Despliegue en Plataforma de Contenedores: Para Kubernetes, ECS u otras plataformas de contenedores, definir pasos específicos para actualizar los despliegues o servicios después de haber subido la imagen.
-    - Pruebas Post-Despliegue: Hacer ejecución de pruebas automáticas después de desplegar la imagen para validar que todo funcione correctamente en el entorno.
+    - Pruebas Post-Despliegue: Hacer ejecución de pruebas automáticas después de desplegar la imagen para validar que todo funcione correctamente en el entorno de contenedorización.
 
 - Monitoreo y Logs:
     - Integrar herramientas de monitoreo y recopilación de logs para el despliegue en la plataforma de contenedores, asegurando visibilidad y diagnóstico continuo del rendimiento de la aplicación.
-
+      
+- Gestión Segura de Secretos:
+    - Variables de Entorno y Secretos: Utilizar variables de entorno y gestión segura de secretos para manejar configuraciones sensibles como credenciales y tokens de acceso.
 
 ## Pasos y/o herramientas para entender las plantillas de Cloudformation y evaluar que ajustes se tendrían que realizar a la etapa de despliegue
 
