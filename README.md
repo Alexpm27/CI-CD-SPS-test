@@ -94,7 +94,7 @@ o de lo contrario no debería permitirlo.
           # Comandos para desplegar en el entorno deseado (ejemplo: Kubernetes, ECS, etc.)
 ```
 
-### Para adaptar el pipeline y la estructura del proyecto a una plataforma basada en contenedores como Kubernetes, ECS, o App Runner, se podrían considerar las siguientes modificaciones:
+## Para adaptar el pipeline y la estructura del proyecto a una plataforma basada en contenedores como Kubernetes, ECS, o App Runner, se podrían considerar las siguientes modificaciones:
 - Dockerfile:
     - Agregar un Dockerfile en la raíz del proyecto para definir cómo construir la imagen del contenedor de la aplicación.
 
@@ -107,30 +107,30 @@ o de lo contrario no debería permitirlo.
     - Integrar herramientas de monitoreo y recopilación de logs para el despliegue en la plataforma de contenedores, asegurando visibilidad y diagnóstico continuo del rendimiento de la aplicación.
 
 
-### Pasos y/o herramientas para entender las plantillas de Cloudformation y evaluar que ajustes se tendrían que realizar a la etapa de despliegue
+## Pasos y/o herramientas para entender las plantillas de Cloudformation y evaluar que ajustes se tendrían que realizar a la etapa de despliegue
 
-##### Revisión de la Documentación de AWS:
+###### Revisión de la Documentación de AWS:
 Se inicia consultando la documentación oficial de AWS sobre ECS y Fargate para comprender los requisitos y las mejores prácticas para el despliegue de contenedores en estas plataformas.
 
-##### Análisis de las Plantillas de CloudFormation:
+###### Análisis de las Plantillas de CloudFormation:
 Posteriormente, se procede a descargar las plantillas de CloudFormation proporcionadas por AWS desde el repositorio. Luego, se examinan los recursos definidos en estas plantillas, como clústeres ECS, definiciones de tarea, servicios y roles IAM.
 
-##### Identificación de Parámetros y Variables:
+###### Identificación de Parámetros y Variables:
 Dentro de las plantillas de CloudFormation, se identifican los parámetros y variables utilizados, que pueden incluir configuraciones específicas del entorno como nombres de clústeres, configuraciones de red y políticas de IAM.
 
 #### Herramientas para evaluar y ajustar las plantillas de CloudFormation:
-##### AWS CloudFormation Designer:
+###### AWS CloudFormation Designer:
 Herramienta gráfica intuitiva, para visualizar y editar las plantillas de CloudFormation de manera eficiente. Con esta herramienta, se pueden arrastrar y soltar componentes, ver relaciones entre recursos y validar la estructura general de las plantillas antes de la implementación.
 
-##### AWS CLI y AWS SDKs:
+###### AWS CLI y AWS SDKs:
 Estas herramientas permiten interactuar con las plantillas de CloudFormation a través de comandos y scripts, facilitando la implementación, actualización y validación de stacks de forma repetible y controlada.
-
+######
 ##### Pruebas en Entornos de Desarrollo:
 Se implementan las plantillas de CloudFormation en entornos de desarrollo. Observar cómo se comportan los despliegues en un entorno controlado permite realizar ajustes según sea necesario.
 
-#### Consideraciones adicionales:
+### Consideraciones adicionales:
 ###### Seguridad y Accesos IAM:
 Es fundamental asegurarse de que los roles IAM utilizados en las plantillas de CloudFormation tengan los permisos adecuados para interactuar con los servicios de AWS utilizados en el entorno ECS con Fargate.
 
-##### Monitoreo y Logging:
+###### Monitoreo y Logging:
 Se integran herramientas de monitoreo y registro, como Amazon CloudWatch, para supervisar el rendimiento y el comportamiento de los contenedores desplegados en ECS con Fargate. Configurar alertas y métricas relevantes proporciona visibilidad continua del entorno y permite una respuesta rápida a posibles problemas operativos.
