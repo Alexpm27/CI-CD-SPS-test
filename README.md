@@ -44,7 +44,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 ```
-- Construcción y verificación: Se ejecuta mvn verify para compilar y probar la aplicación.
+- Construcción y verificación: Se ejecuta mvn verify para compilar y probar la API.
 ```pipeline.yml
       - name: Build and Verify with Maven
         run: mvn verify
